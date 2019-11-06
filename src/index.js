@@ -1,5 +1,5 @@
 import React from 'react';
-import {StatusBar, Text, SafeAreaView} from 'react-native';
+import { StatusBar, Text, SafeAreaView } from 'react-native';
 
 export default function App() {
   return (
