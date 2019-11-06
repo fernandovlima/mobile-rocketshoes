@@ -1,16 +1,20 @@
 import React from 'react';
-import { StatusBar, SafeAreaView, Text } from 'react-native';
+import { Provider } from 'react-redux';
+import { StatusBar } from 'react-native';
 
 import Routes from './routes';
 import './config/ReactotronConfig';
 
-export default function App() {
+import store from './store';
+
+function App() {
   return (
-    <>
-      <SafeAreaView>
-        <StatusBar barStyle="light-content" backgroundColor="#45B39D" />
-        <Routes />
-      </SafeAreaView>
-    </>
+    <Provider store={store}>
+      <StatusBar barStyle="light-content" backgroundColor="#45B39D" />
+
+      <Routes />
+    </Provider>
   );
 }
+
+export default App;
