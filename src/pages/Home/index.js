@@ -16,6 +16,7 @@ import {
   AddToCartButton,
   ProductAmount,
   ProductAmountText,
+  AddButtonText,
 } from './styles';
 
 class Home extends Component {
@@ -36,6 +37,12 @@ class Home extends Component {
     });
   }
 
+  handleAddProduct = id => {
+    const { addToCartRequest } = this.props;
+
+    addToCartRequest(id);
+  };
+
   render() {
     const { products } = this.state;
     const { amount } = this.props;
@@ -48,11 +55,12 @@ class Home extends Component {
             <ProductImage source={{ uri: item.image }} />
             <ProductTitle>{item.title}</ProductTitle>
             <ProductPrice>{item.priceFormatted}</ProductPrice>
-            <AddToCartButton>
+            <AddToCartButton onPress={() => this.handleAddProduct(item.id)}>
               <ProductAmount>
                 <Icon name="add-shopping-cart" size={20} color="#fff" />
                 <ProductAmountText>{amount[item.id] || 0}</ProductAmountText>
               </ProductAmount>
+              <AddButtonText>ADD TO CART</AddButtonText>
             </AddToCartButton>
           </Product>
         )}
