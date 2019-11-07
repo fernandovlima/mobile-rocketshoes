@@ -8,7 +8,9 @@ export const Container = styled.View`
 
 export const ProductList = styled.FlatList.attrs({
   showVerticalScrollIndicator: false,
-})``;
+})`
+  padding: 30px;
+`;
 
 export const Product = styled.View`
   background: #fff;
@@ -21,8 +23,8 @@ export const Product = styled.View`
 `;
 
 export const ProductImage = styled.Image`
-  height: 120px;
-  width: 120px;
+  height: 140px;
+  width: 140px;
   border-radius: 10px;
   background: #eee;
   margin-left: 10px;

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import LottieView from 'lottie-react-native';
 import * as CartActions from '../../store/modules/cart/actions';
 
 import { formatPrice } from '../../util/format';
@@ -85,6 +86,7 @@ function Cart({
       ) : (
         <EmptyContainer>
           <Icon name="remove-shopping-cart" size={64} color="#eee" />
+          <LottieView source="../../assets/lotties/empty-cart.json" autoplay />
           <EmptyText>Your cart is empty.</EmptyText>
         </EmptyContainer>
       )}
