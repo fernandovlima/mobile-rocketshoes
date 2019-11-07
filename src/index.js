@@ -7,13 +7,11 @@ import './config/ReactotronConfig';
 
 import store from './store';
 
-import Header from './components/Header/index';
-
 function App() {
   return (
     <Provider store={store}>
       <StatusBar barStyle="light-content" backgroundColor="#45B39D" />
-      <Header />
+
       <Routes />
     </Provider>
   );

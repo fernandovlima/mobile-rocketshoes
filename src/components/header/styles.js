@@ -6,7 +6,7 @@ export const Wrapper = styled.SafeAreaView`
   flex: 1;
   background: #0b5345;
   flex-direction: row;
-  max-height: 110px;
+  max-height: 140px;
 `;
 
 export const Container = styled.View`
