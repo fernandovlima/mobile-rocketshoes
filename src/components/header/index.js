@@ -12,7 +12,8 @@ import {
 
 Icon.loadFont();
 
-function Header({ cartSize, navigation }) {
+function Header({ navigation, cartSize }) {
+  console.tron.log('NAVIGATION', navigation);
   return (
     <Wrapper>
       <Container>
@@ -26,6 +27,9 @@ function Header({ cartSize, navigation }) {
   );
 }
 
-export default connect(state => ({
-  cartSize: state.cart.length,
-}))(Header);
+export default connect(
+  state => ({
+    cartSize: state.cart.length,
+  }),
+  null
+)(Header);

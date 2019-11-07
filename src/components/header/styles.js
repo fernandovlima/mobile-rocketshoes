@@ -30,6 +30,7 @@ export const CartContainer = styled.TouchableOpacity`
   flex: 1;
   align-items: flex-end;
   justify-content: flex-end;
+  margin-right: 15px;
 `;
 
 export const ItemCount = styled.Text`

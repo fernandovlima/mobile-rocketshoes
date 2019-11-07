@@ -7,8 +7,18 @@ import Cart from './pages/Cart/index';
 const Routes = createAppContainer(
   createStackNavigator(
     {
-      Home,
-      Cart,
+      Home: {
+        screen: Home,
+        defaultNavigationOptions: {
+          title: 'Products',
+        },
+      },
+      Cart: {
+        screen: Cart,
+        defaultNavigationOptions: {
+          title: 'Cart',
+        },
+      },
     },
     {
       headerLayoutPreset: 'center',

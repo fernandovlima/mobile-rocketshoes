@@ -46,6 +46,7 @@ class Home extends Component {
   render() {
     const { products } = this.state;
     const { amount } = this.props;
+
     return (
       <ProductList
         data={products}
@@ -83,5 +84,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Home);
-
-// mapDispatchToProps
