@@ -59,16 +59,20 @@ function Cart({
                     <ProductPrice>{product.priceFormatted}</ProductPrice>
                   </ProductDetails>
                   <ProductDelete onPress={() => removeFromCart(product.id)}>
-                    <Icon name="delete-forever" size={24} color="#fff" />
+                    <Icon name="delete-forever" size={24} color="#45b39d" />
                   </ProductDelete>
                 </ProductInfo>
                 <ProductControls>
                   <ProductControlButton onPress={() => decrement(product)}>
-                    <Icon name="remove-circle-outline" size={20} color="#fff" />
+                    <Icon
+                      name="remove-circle-outline"
+                      size={20}
+                      color="#45b39d"
+                    />
                   </ProductControlButton>
                   <ProductAmount value={String(product.amount)} />
                   <ProductControlButton onPress={() => increment(product)}>
-                    <Icon name="add-circle-outline" size={20} color="#fff" />
+                    <Icon name="add-circle-outline" size={20} color="#45b39d" />
                   </ProductControlButton>
                   <ProductSubtotal>{product.subtotal}</ProductSubtotal>
                 </ProductControls>
@@ -85,7 +89,7 @@ function Cart({
         </>
       ) : (
         <EmptyContainer>
-          <Icon name="remove-shopping-cart" size={64} color="#eee" />
+          <Icon name="remove-shopping-cart" size={60} color="#45b39d" />
           <LottieView source="../../assets/lotties/empty-cart.json" autoplay />
           <EmptyText>Your cart is empty.</EmptyText>
         </EmptyContainer>

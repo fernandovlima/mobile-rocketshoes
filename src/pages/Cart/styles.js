@@ -9,7 +9,9 @@ export const Container = styled.View`
 
 export const Products = styled.View``;
 
-export const Product = styled.View``;
+export const Product = styled.View`
+  padding: 10px;
+`;
 
 export const ProductInfo = styled.View`
   flex-direction: row;
@@ -17,8 +19,8 @@ export const ProductInfo = styled.View`
 `;
 
 export const ProductImage = styled.Image`
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
 `;
 export const ProductDetails = styled.View`
   flex: 1;
@@ -82,7 +84,7 @@ export const TotalAmount = styled.Text`
   font-weight: bold;
 `;
 export const Order = styled.TouchableOpacity`
-  background: #adad;
+  background: #45b39d;
   padding: 12px;
   border-radius: 4px;
 `;
