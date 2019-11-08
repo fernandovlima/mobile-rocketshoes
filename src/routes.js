@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import OrderComplete from './pages/OrderComplete';
 
 import Header from './components/Header';
 
@@ -20,6 +21,12 @@ const Routes = createAppContainer(
         screen: Cart,
         defaultNavigationOptions: {
           title: 'Cart',
+        },
+      },
+      OrderComplete: {
+        screen: OrderComplete,
+        defaultNavigationOptions: {
+          title: 'Order Complete',
         },
       },
     },

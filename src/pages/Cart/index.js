@@ -28,6 +28,8 @@ import {
   OrderText,
   EmptyContainer,
   EmptyText,
+  BackToShop,
+  BackToShopText,
 } from './styles';
 
 function Cart({
@@ -82,7 +84,7 @@ function Cart({
           <TotalContainer>
             <TotalText>TOTAL</TotalText>
             <TotalAmount>{total}</TotalAmount>
-            <Order>
+            <Order onPress={() => navigation.navigate('OrderComplete')}>
               <OrderText>ORDER</OrderText>
             </Order>
           </TotalContainer>
@@ -92,6 +94,10 @@ function Cart({
           <Icon name="remove-shopping-cart" size={60} color="#45b39d" />
           <LottieView source="../../assets/lotties/empty-cart.json" autoplay />
           <EmptyText>Your cart is empty.</EmptyText>
+          <BackToShop onPress={() => navigation.navigate('Home')}>
+            <Icon name="arrow-back" size={20} color="#FFF" />
+            <BackToShopText>Back to Shop</BackToShopText>
+          </BackToShop>
         </EmptyContainer>
       )}
     </Container>
